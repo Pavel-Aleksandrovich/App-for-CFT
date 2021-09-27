@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My notes-->
         <scene sceneID="sUn-1L-0iN">
             <objects>
                 <tableViewController id="tXE-Hm-R5p" customClass="MainTableViewController" customModule="App_for_CFT" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="tXE-Hm-R5p" id="X7I-Ov-8f4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dE1-1A-Wr7"/>
+                    <navigationItem key="navigationItem" title="My notes" id="dE1-1A-Wr7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xj1-Vu-eiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,6 +43,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gYZ-Tn-2vC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="29"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="tXE-Hm-R5p" kind="relationship" relationship="rootViewController" id="coh-Hk-o01"/>
