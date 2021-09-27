@@ -26,11 +26,11 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifireCell, for: indexPath)
-        cell.textLabel?.text = notes[indexPath.row]
-        cell.imageView?.image = UIImage(named: notes[indexPath.row])
-        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
-        cell.imageView?.clipsToBounds = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifireCell, for: indexPath) as! CustomTableViewCell
+        cell.labelForTitle.text = notes[indexPath.row]
+        cell.imageForNote.image = UIImage(named: notes[indexPath.row])
+        cell.imageForNote.layer.cornerRadius = cell.imageForNote.frame.size.height / 2
+        cell.imageForNote.clipsToBounds = true
 
         
 
