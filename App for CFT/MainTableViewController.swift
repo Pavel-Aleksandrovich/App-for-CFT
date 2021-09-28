@@ -10,8 +10,12 @@ import UIKit
 class MainTableViewController: UITableViewController {
     
     let identifireCell = "cell"
-    let heightForRow = 85
-    let notes = ["Балкан Гриль", "Бочка"]
+//    let notes = ["Балкан Гриль", "Бочка"]
+    
+    let note = [
+        Model(title: "Балкан Гриль", subTitle: "subTitle", image: "Балкан Гриль"),
+        Model(title: "Бочка", subTitle: "subTitle", image: "Бочка")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +26,14 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return notes.count
+        return note.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifireCell, for: indexPath) as! CustomTableViewCell
-        cell.labelForTitle.text = notes[indexPath.row]
-        cell.imageForNote.image = UIImage(named: notes[indexPath.row])
+        cell.labelForTitle.text = note[indexPath.row].title
+        cell.labelForSubTitle.text = note[indexPath.row].subTitle
+        cell.imageForNote.image = UIImage(named: note[indexPath.row].image)
         cell.imageForNote.layer.cornerRadius = cell.imageForNote.frame.size.height / 2
         cell.imageForNote.clipsToBounds = true
 
@@ -36,10 +41,6 @@ class MainTableViewController: UITableViewController {
 
         return cell
     }
-    // MARK: - Table view delegate
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
-    }
-   
+    @IBAction func cancelAction(_ segue: UIStoryboardSegue) {}
 }
