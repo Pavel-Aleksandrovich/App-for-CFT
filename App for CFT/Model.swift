@@ -5,10 +5,12 @@
 //  Created by pavel mishanin on 27.09.2021.
 //
 
-import Foundation
+import RealmSwift
 
-struct Model {
-    var title: String
-    var subTitle: String
-    var image: String
+class Model: Object {
+    @objc dynamic var title = ""
+    @objc dynamic var subTitle: String?
+    @objc dynamic var newImage: Data?
 }
+
+let image = UIImage(named: )

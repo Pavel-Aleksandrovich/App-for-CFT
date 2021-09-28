@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DBA4E1C23EBB6D850EB6D1B /* Pods_App_for_CFT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395A381157B36169F36770E /* Pods_App_for_CFT.framework */; };
 		8450A29427018FCD00E00C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A29327018FCD00E00C90 /* AppDelegate.swift */; };
 		8450A29627018FCD00E00C90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A29527018FCD00E00C90 /* SceneDelegate.swift */; };
 		8450A29B27018FCD00E00C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A29927018FCD00E00C90 /* Main.storyboard */; };
@@ -16,9 +17,12 @@
 		8450A2AC2701C7BC00E00C90 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2AB2701C7BC00E00C90 /* CustomTableViewCell.swift */; };
 		8450A2AE2701D0FA00E00C90 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2AD2701D0FA00E00C90 /* Model.swift */; };
 		8450A2B02702B75200E00C90 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2AF2702B75200E00C90 /* NewNoteViewController.swift */; };
+		8450A2B22703151C00E00C90 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A2B12703151C00E00C90 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4395A381157B36169F36770E /* Pods_App_for_CFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_for_CFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A5EBE387F33E62DDC202ED /* Pods-App for CFT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App for CFT.release.xcconfig"; path = "Target Support Files/Pods-App for CFT/Pods-App for CFT.release.xcconfig"; sourceTree = "<group>"; };
 		8450A29027018FCD00E00C90 /* App for CFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App for CFT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450A29327018FCD00E00C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450A29527018FCD00E00C90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		8450A2AB2701C7BC00E00C90 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		8450A2AD2701D0FA00E00C90 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8450A2AF2702B75200E00C90 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		8450A2B12703151C00E00C90 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B275A65AE58BB0197765870D /* Pods-App for CFT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App for CFT.debug.xcconfig"; path = "Target Support Files/Pods-App for CFT/Pods-App for CFT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBA4E1C23EBB6D850EB6D1B /* Pods_App_for_CFT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		269F943F55DE99A93562B5C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4395A381157B36169F36770E /* Pods_App_for_CFT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C71B28EE64640AFCFEAB8DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B275A65AE58BB0197765870D /* Pods-App for CFT.debug.xcconfig */,
+				52A5EBE387F33E62DDC202ED /* Pods-App for CFT.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8450A28727018FCD00E00C90 = {
 			isa = PBXGroup;
 			children = (
 				8450A29227018FCD00E00C90 /* App for CFT */,
 				8450A29127018FCD00E00C90 /* Products */,
+				7C71B28EE64640AFCFEAB8DC /* Pods */,
+				269F943F55DE99A93562B5C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +93,7 @@
 				8450A2A927019C6800E00C90 /* MainTableViewController.swift */,
 				8450A2AB2701C7BC00E00C90 /* CustomTableViewCell.swift */,
 				8450A2AD2701D0FA00E00C90 /* Model.swift */,
+				8450A2B12703151C00E00C90 /* StorageManager.swift */,
 				8450A2AF2702B75200E00C90 /* NewNoteViewController.swift */,
 				8450A29927018FCD00E00C90 /* Main.storyboard */,
 				8450A29C27018FCE00E00C90 /* Assets.xcassets */,
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8450A2A427018FCE00E00C90 /* Build configuration list for PBXNativeTarget "App for CFT" */;
 			buildPhases = (
+				DC40F5D279F594855E7AC8E2 /* [CP] Check Pods Manifest.lock */,
 				8450A28C27018FCD00E00C90 /* Sources */,
 				8450A28D27018FCD00E00C90 /* Frameworks */,
 				8450A28E27018FCD00E00C90 /* Resources */,
+				8668B42F933B44AA9CCFD51B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +170,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8668B42F933B44AA9CCFD51B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App for CFT/Pods-App for CFT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App for CFT/Pods-App for CFT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App for CFT/Pods-App for CFT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC40F5D279F594855E7AC8E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App for CFT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8450A28C27018FCD00E00C90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +220,7 @@
 				8450A2AE2701D0FA00E00C90 /* Model.swift in Sources */,
 				8450A29427018FCD00E00C90 /* AppDelegate.swift in Sources */,
 				8450A2AA27019C6800E00C90 /* MainTableViewController.swift in Sources */,
+				8450A2B22703151C00E00C90 /* StorageManager.swift in Sources */,
 				8450A2AC2701C7BC00E00C90 /* CustomTableViewCell.swift in Sources */,
 				8450A29627018FCD00E00C90 /* SceneDelegate.swift in Sources */,
 				8450A2B02702B75200E00C90 /* NewNoteViewController.swift in Sources */,
@@ -295,6 +367,7 @@
 		};
 		8450A2A527018FCE00E00C90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B275A65AE58BB0197765870D /* Pods-App for CFT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +387,7 @@
 		};
 		8450A2A627018FCE00E00C90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A5EBE387F33E62DDC202ED /* Pods-App for CFT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

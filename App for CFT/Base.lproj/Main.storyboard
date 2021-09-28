@@ -130,16 +130,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="318.99999988079071" id="Adv-xH-sy3">
-                                        <rect key="frame" x="0.0" y="109.5" width="414" height="319"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="201.99999988079071" id="Adv-xH-sy3">
+                                        <rect key="frame" x="0.0" y="109.5" width="414" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Adv-xH-sy3" id="OT0-Gc-qe2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="319"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Enter the text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2bh-Wq-SmU">
-                                                    <rect key="frame" x="16" y="8" width="382" height="303"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="16" y="8" width="382" height="186"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <connections>
@@ -156,7 +155,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="fPf-Q2-Ip2">
-                                        <rect key="frame" x="0.0" y="428.5" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="311.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fPf-Q2-Ip2" id="3ko-Yw-6j0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -185,11 +184,21 @@
                     <navigationItem key="navigationItem" title="New note" id="3cB-Bn-jMc">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="71y-vh-Gpy">
                             <connections>
-                                <segue destination="MxW-BK-93y" kind="unwind" unwindAction="cancelAction:" id="F5x-rZ-JXZ"/>
+                                <action selector="cancelAction:" destination="G2V-Rg-NDx" id="vBt-Vf-Ai9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UPh-FN-zDM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UPh-FN-zDM">
+                            <connections>
+                                <segue destination="MxW-BK-93y" kind="unwind" unwindAction="unwindSegue:" id="fZZ-d0-hCY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageOfNote" destination="IvA-vi-mAX" id="OIb-p9-glF"/>
+                        <outlet property="noteTextField" destination="2bh-Wq-SmU" id="irI-xf-cbK"/>
+                        <outlet property="saveButton" destination="UPh-FN-zDM" id="H8v-y5-muc"/>
+                        <outlet property="titleTextField" destination="U4Y-wi-1IE" id="8GB-HO-HY8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xh0-Hr-F9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="MxW-BK-93y" userLabel="Exit" sceneMemberID="exit"/>

@@ -12,9 +12,8 @@ class MainTableViewController: UITableViewController {
     let identifireCell = "cell"
 //    let notes = ["Балкан Гриль", "Бочка"]
     
-    let note = [
-        Model(title: "Балкан Гриль", subTitle: "subTitle", image: "Балкан Гриль"),
-        Model(title: "Бочка", subTitle: "subTitle", image: "Бочка")
+    var note = [
+        Model(title: "Балкан Гриль", subTitle: "subTitle", image: "Балкан Гриль", newImage: nil)
     ]
 
     override func viewDidLoad() {
@@ -31,9 +30,19 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifireCell, for: indexPath) as! CustomTableViewCell
-        cell.labelForTitle.text = note[indexPath.row].title
-        cell.labelForSubTitle.text = note[indexPath.row].subTitle
-        cell.imageForNote.image = UIImage(named: note[indexPath.row].image)
+        
+        let notes = note[indexPath.row]
+        
+        cell.labelForTitle.text = notes.title
+        cell.labelForSubTitle.text = notes.subTitle
+        
+        if notes.newImage == nil {
+            cell.imageForNote.image = UIImage(named: notes.image!)
+        } else {
+            cell.imageForNote.image = notes.newImage
+        }
+        
+        
         cell.imageForNote.layer.cornerRadius = cell.imageForNote.frame.size.height / 2
         cell.imageForNote.clipsToBounds = true
 
@@ -42,5 +51,13 @@ class MainTableViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func cancelAction(_ segue: UIStoryboardSegue) {}
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        guard let newNoteVC = segue.source as? NewNoteViewController else {return}
+        
+        newNoteVC.saveNewNote()
+        note.append(newNoteVC.newModel!)
+        tableView.reloadData()
+        
+        
+    }
 }
