@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewNoteViewController: UITableViewController, UINavigationControllerDelegate {
     
-    var newModel: Model?
-
+    
     @IBOutlet weak var noteTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -50,7 +50,16 @@ class NewNoteViewController: UITableViewController, UINavigationControllerDelega
     }
     
     func saveNewNote() {
-        newModel = Model(title: titleTextField.text!, subTitle: noteTextField.text, image: nil, newImage: imageOfNote.image)
+        
+
+        var image: UIImage?
+        
+        let imageData = image?.pngData()
+        
+        let newNote = Model(title: titleTextField.text!, subTitle: noteTextField.text, oneImage: imageData)
+        
+        StorageManager.saveNotes(newNote)
+        
     }
     // Возврат на предыдущий экран по нажатию на кнопку Cancel
     @IBAction func cancelAction(_ sender: Any) {

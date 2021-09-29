@@ -10,7 +10,14 @@ import RealmSwift
 class Model: Object {
     @objc dynamic var title = ""
     @objc dynamic var subTitle: String?
-    @objc dynamic var newImage: Data?
+    @objc dynamic var oneImage: Data?
+     
+    convenience init(title: String, subTitle: String?, oneImage: Data?){
+        self.init()
+        self.title = title
+        self.subTitle = subTitle
+        self.oneImage = oneImage
+    }
 }
 
-let image = UIImage(named: )
+
